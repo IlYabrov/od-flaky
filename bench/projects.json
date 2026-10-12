@@ -1,0 +1,19 @@
+[
+ {
+  "name": "IOCynergy",
+  "url": "https://github.com/omersaraf/IOCynergy",
+  "commit": "1821423680f741d8ca06bcc6a02c8b21156f9ba0",
+  "patches": [
+   {"file": "cynergy/container.py",
+    "old": "if type(cls) == type(List):",
+    "new": "if getattr(cls, '__origin__', None) is list:",
+    "why": "since Python 3.9 type(List) != type(List[X]); without the fix every test with List[...] crashes"}
+  ]
+ },
+ {
+  "name": "GOApy",
+  "url": "https://github.com/leopepe/GOApy",
+  "commit": "a8e0dfe5f0f593107884ad54f89a27f67ee28129",
+  "patches": []
+ }
+]

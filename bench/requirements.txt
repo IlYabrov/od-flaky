@@ -1,0 +1,5 @@
+# Dependencies of the benchmark projects (GOApy); versions compatible with Python 3.8-3.11
+networkx==2.5.1
+numpy<2  # networkx 2.5 imports numpy if it is installed and fails with numpy 2.x
+Automat==20.2.0
+Rx==1.6.0
