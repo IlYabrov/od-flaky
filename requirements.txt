@@ -1,0 +1,4 @@
+# odflaky itself needs only pytest (the tested projects are run with it)
+pytest>=7.0
+# experiments/plots.py only
+matplotlib>=3.5
