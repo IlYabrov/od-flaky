@@ -1,5 +1,7 @@
 # odflaky: detecting order-dependent flaky tests in Python
 
+[Русская версия](README.ru.md)
+
 # Authors and contributors
 
 The main contributor is Ilya K. Yabrov, student of SPbPU ICSC.
@@ -125,7 +127,7 @@ odflaky/            the tool
   __main__.py         command line
 examples/           author's illustrative example (pytest project and its JSON model)
 expected/           reference output for the example
-data/               iPFlakies ground truth subset
+data/               iPFlakies ground truth subset, synthetic 500-test suite
 bench/              benchmark projects (commits, compatibility patches, dependencies)
 experiments/        experiment and plotting scripts
 results/            produced CSV files and figures
