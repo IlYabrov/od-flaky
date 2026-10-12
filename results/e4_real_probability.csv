@@ -1,0 +1,3 @@
+project,test,type,p_or_s,c,theory,empirical,agreement,samples
+IOCynergy,cynergy/tests/test_register_multiple.py::test_register_multiple,victim,3,6,0.3,0.2667,1.0,300
+GOApy,tests/Sensor_test.py::SensorsTest::test_remove_sensor_success,brittle,4,0,0.2,0.2033,1.0,300

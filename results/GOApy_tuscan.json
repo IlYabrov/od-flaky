@@ -1,0 +1,26 @@
+{
+  "suite": "GOApy",
+  "tests": 12,
+  "strategy": "tuscan",
+  "seed": 0,
+  "orders": 13,
+  "pair_coverage": 1.0,
+  "detection_runs": 13,
+  "total_runs": 29,
+  "od_tests": [
+    {
+      "test": "tests/Sensor_test.py::SensorsTest::test_remove_sensor_success",
+      "type": "brittle",
+      "found_at_order": 1,
+      "culprit": [
+        "tests/Automaton_test.py::AutomatonTest::test_acting"
+      ],
+      "culprits_all": [
+        "tests/Automaton_test.py::AutomatonTest::test_acting",
+        "tests/Automaton_test.py::AutomatonTest::test_planning",
+        "tests/Automaton_test.py::AutomatonTest::test_sensing",
+        "tests/Sensor_test.py::SensorsTest::test_add_success"
+      ]
+    }
+  ]
+}
