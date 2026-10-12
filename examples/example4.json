@@ -1,0 +1,7 @@
+{
+ "name": "example4",
+ "description": "Model of examples/lang_app: t1 victim (polluter t4, cleaner t2), t3 brittle (setter t2)",
+ "tests": ["test_app.py::test_greet", "test_app.py::test_init", "test_app.py::test_query", "test_app.py::test_switch_lang"],
+ "victims": {"test_app.py::test_greet": {"polluters": ["test_app.py::test_switch_lang"], "cleaners": ["test_app.py::test_init"]}},
+ "brittles": {"test_app.py::test_query": {"setters": ["test_app.py::test_init"]}}
+}

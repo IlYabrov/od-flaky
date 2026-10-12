@@ -1,0 +1,39 @@
+{
+  "suite": "example4",
+  "tests": 4,
+  "strategy": "tuscan",
+  "seed": 0,
+  "orders": 5,
+  "pair_coverage": 1.0,
+  "detection_runs": 5,
+  "total_runs": 15,
+  "od_tests": [
+    {
+      "test": "test_app.py::test_greet",
+      "type": "victim",
+      "found_at_order": 4,
+      "culprit": [
+        "test_app.py::test_switch_lang"
+      ],
+      "culprits_all": [
+        "test_app.py::test_switch_lang"
+      ],
+      "cleaners": {
+        "test_app.py::test_switch_lang": [
+          "test_app.py::test_init"
+        ]
+      }
+    },
+    {
+      "test": "test_app.py::test_query",
+      "type": "brittle",
+      "found_at_order": 3,
+      "culprit": [
+        "test_app.py::test_init"
+      ],
+      "culprits_all": [
+        "test_app.py::test_init"
+      ]
+    }
+  ]
+}
