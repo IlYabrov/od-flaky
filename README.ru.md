@@ -29,6 +29,26 @@ Order-dependent (OD) тест проходит или падает в завис
 Набор тестов задаётся либо реальным pytest-проектом (каждый порядок выполняется в новом процессе Python),
 либо JSON-моделью набора произвольного размера.
 
+# Алгоритмы и данные
+
+## Алгоритмы
+
+| Алгоритм | Назначение | Источник | Код |
+|---|---|---|---|
+| Тосканские квадраты (построение Уильямса) | обнаружение: порядки, покрывающие все пары соседних тестов | Wei et al., TACAS 2021, [PDF](https://link.springer.com/content/pdf/10.1007/978-3-030-72016-2_15.pdf), [DOI](https://doi.org/10.1007/978-3-030-72016-2_15) | `odflaky/orders.py` |
+| Случайные порядки | обнаружение: базовый вариант | Lam et al., ICST 2019 (iDFlakies), [PDF](https://mir.cs.illinois.edu/winglam/publications/2019/LamETAL19iDFlakies.pdf), [DOI](https://doi.org/10.1109/ICST.2019.00038) | `odflaky/orders.py` |
+| Дельта-отладка polluter'ов/state-setter'ов, поиск cleaner'ов | причина OD-теста | Shi et al., ESEC/FSE 2019 (iFixFlakies), [PDF](https://mir.cs.illinois.edu/winglam/publications/2019/ShiETAL19iFixFlakies.pdf), [DOI](https://doi.org/10.1145/3338906.3338925); Zeller, Hildebrandt, TSE 2002, [DOI](https://doi.org/10.1109/32.988498) | `odflaky/detect.py` |
+
+## Входные данные
+
+| Данные | Вид | Источник | В репозитории |
+|---|---|---|---|
+| IOCynergy | проект бенчмарка (pytest) | [github.com/omersaraf/IOCynergy](https://github.com/omersaraf/IOCynergy) | клонируется `bench/setup_bench.py` |
+| GOApy | проект бенчмарка (pytest) | [github.com/leopepe/GOApy](https://github.com/leopepe/GOApy) | клонируется `bench/setup_bench.py` |
+| Набор данных iPFlakies (victim/brittle, polluter'ы, cleaner'ы) | эталонный выход для бенчмарка | Wang et al., ICSE 2022, [DOI](https://doi.org/10.1145/3510454.3516846); данные: [zenodo.org/record/6176417](https://doi.org/10.5281/zenodo.6176417) | `data/ipflakies_subset.csv` |
+| lang_app, 4 теста | авторский иллюстративный пример | этот репозиторий | `examples/`, `expected/example4.json` |
+| Синтетический набор, 500 тестов | входные данные переменного объёма | генерируется `python -m odflaky gen` | `data/synthetic_500.json` |
+
 # Инструкция
 
 ## Требования
